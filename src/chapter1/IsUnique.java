@@ -6,9 +6,11 @@ import java.util.HashMap;
 public class IsUnique {
 
 	public static void main(String[] args) {
-		String input = "Helllloa";
+		String input = "Heloa";
 
-		System.out.println(input + " has all unique characters: " + checkUniqueCharacters2(input));
+		System.out.println(input + " has all unique characters: " + checkUniqueSmart(input));
+		
+		System.out.println((int)input.charAt(1));
 	}
 
 	/* BRUTE FORCE APPROACH AND USED ADDITIONAL DATA STRUCTURES -> BIG-O ( n^2 ) */
@@ -58,5 +60,17 @@ public class IsUnique {
 		}
 		return true;
 	}
+	
+	/* Smart version*/
 
+	public static boolean checkUniqueSmart(String s) {
+		int[] arrayOfChars = new int[256];
+		for(char c : s.toCharArray()){
+			if(arrayOfChars[c] != 0)
+				return false;
+			else
+				arrayOfChars[c] = 1;
+		}
+		return true;
+	}
 }
