@@ -3,14 +3,20 @@ package chapter1;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/** Checks if given string is unique
+ * Tips:
+ * 		- try a hash table
+ * 		- Could a bit vector be useful?
+ * 		- Can you solve it in O (N log N) time? What might a solution look like?
+ * @author stasiek
+ *
+ */
 public class IsUnique {
 
 	public static void main(String[] args) {
 		String input = "Heloa";
 
 		System.out.println(input + " has all unique characters: " + checkUniqueSmart(input));
-		
-		System.out.println((int)input.charAt(1));
 	}
 
 	/* BRUTE FORCE APPROACH AND USED ADDITIONAL DATA STRUCTURES -> BIG-O ( n^2 ) */
