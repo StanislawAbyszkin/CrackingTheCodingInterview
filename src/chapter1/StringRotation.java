@@ -10,6 +10,8 @@ public class StringRotation {
 	
 	public static boolean isStringRotated(String s1, String s2)
 	{
+		if(s1.length() != s2.length())
+			return false;
 		StringBuilder sb = new StringBuilder(s1);
 		sb.append(s1);
 		return sb.toString().contains(s2);

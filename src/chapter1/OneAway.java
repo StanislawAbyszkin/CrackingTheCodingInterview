@@ -3,8 +3,8 @@ package chapter1;
 public class OneAway {
 
 	public static void main(String[] args) {
-		String s1 = "alep";
-		String s2 = "alep";
+		String s1 = "ate";
+		String s2 = "mate";
 
 		// System.out.println(removeCharacter(s1, s2) || addCharacter(s1, s2));
 		System.out.println(replaceCharacter(s1, s2));

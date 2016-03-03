@@ -3,7 +3,7 @@ package chapter1;
 public class RotateMatrix {
 
 	public static void main(String[] args) {
-		float[][] a = { { 1, 2, 3 }, { 4, 5, 6 } };
+		float[][] a = { { 1, 2,3,4}, { 5,6,7,8 },{9,10,11,12} };
 		printMatrix(rotateMatrix(a));
 	}
 
@@ -13,7 +13,7 @@ public class RotateMatrix {
 		float[][] newMatrix = new float[cols][rows];
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++) {
-				newMatrix[j][i] = matrix[i][cols - j -1];
+				newMatrix[j][i] = matrix[i][cols - j - 1];
 			}
 		}
 		
